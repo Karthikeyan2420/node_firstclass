@@ -1,0 +1,111 @@
+Express.js Tutorial
+
+Express.js is a web framework for Node.js. It is a fast, robust and asynchronous in nature.
+
+Express.js 
+installation on windows and linux, request object, response object, get method, 
+post method, cookie management, scaffolding, file upload, template etc.
+
+What is Express.js
+Express is a fast, assertive, essential and moderate web framework of Node.js. 
+You can assume express as a layer built on the top of the Node.js that helps manage a server and routes. 
+It provides a robust set of features to develop web and mobile applications.
+
+
+
+Why use Express
+Ultra fast I/O
+Asynchronous and single threaded
+MVC like structure
+Robust API makes routing easy
+Let's see a basic Express.js app.
+ 
+===========================================================================================================
+
+install express
+
+npm install express  (or) npm i express
+
+express is the package , use require to get that package
+initial express function to the app variable
+
+get - it use to the show that content
+
+The regular expression ^/$|/index(.html)? is used to match specific URLs, typically in routing or URL validation. Here’s a breakdown:
+
+^ - Matches the start of the string.
+
+/ - Matches a single forward slash /, often representing the root path of a website.
+
+$ - Matches the end of the string.
+
+So, ^/$ matches the root URL path / only.
+| - Acts as an "or" operator, allowing either the expression on the left (^/$) or the expression on the right to match.
+
+/index(.html)? - Matches /index, optionally followed by .html.
+
+
+
+NODEMON
+----------------
+
+nodemon is used to not restart the server again, it is like a live server
+
+INSTALL : npm install nodemon (or) npm i nodemon
+
+
+
+res.sendFile =>  it used to which html is show in front end
+res.redirect => it used to redirect the path
+301 => permanent redirect
+302 => non permanent redirect
+
+
+
+
+
+
+=========================================================================================================================
+Template:
+-----------------------
+.hbs-handlebars
+
+
+cmd:
+
+install expressjs:
+	npm install express --save
+creating project:
+	npm install express-generator -g
+	express -v
+	
+
+
+vs.code:
+open terminal
+install npm:
+	npm install
+Run:
+	npm start
+
+open the browser:
+	localhost:3000
+
+It does not have html files, Its run usting hbs files 
+views>>hbs files
+1.error.hbs - if some time error will be raise , so it print error msg in the 
+	webpage.
+2.index.hbs - it has a body of the website
+3.layout.hbs - it has a total layout in the website
+
+routes>>
+it has a js files
+index.js - it has basic javascript files
+users.js - it has a userdefine js files, so delete it 
+	if you delete it , go to the app.js file and delete the 
+	two line using user.js files
+	1.var indexuserRouter=require('./routes/index');
+	2.app.use('/',indexuserRouter);
+
+if you add bootstrap and jquery
+add to the layout.hbs file
