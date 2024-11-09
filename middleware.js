@@ -20,7 +20,7 @@ app.use(express.json()) //json file
 console.log(path.join(__dirname,'public'))
 app.use(express.static(path.join(__dirname,'public')))
 
-const whitelist=["https://www.google.com","https://localhost:3500","https://localhost:5500"]
+const whitelist=["https://www.google.com","https://localhost:3500","https://localhost:5500"] //only allow this websites only
 const corsoption={
   origin:(origin,callback)=>{
     if(whitelist.indexOf(origin)!==-1 || !origin){
